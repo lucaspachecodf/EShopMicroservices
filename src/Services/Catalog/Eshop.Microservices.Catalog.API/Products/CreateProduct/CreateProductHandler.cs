@@ -1,14 +1,10 @@
-﻿using Eshop.Microservices.BuildingBlocks.CQRS;
-using Eshop.Microservices.Catalog.API.Models;
-using MediatR;
-
-namespace Eshop.Microservices.Catalog.API.Products.CreateProduct
+﻿namespace Eshop.Microservices.Catalog.API.Products.CreateProduct
 {
     public record CreateProductCommand(string Name, List<string> Category, string Description, string ImageFile, decimal Price) : ICommand<CreateProductResult>;
     public record CreateProductResult(Guid Id);
 
 
-    internal class CreateProductHandler : ICommandHandler<CreateProductCommand, CreateProductResult>
+    internal class CreateProductCommandHandler(IDocumentSession documentSession) : ICommandHandler<CreateProductCommand, CreateProductResult>
     {
         public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
@@ -21,7 +17,10 @@ namespace Eshop.Microservices.Catalog.API.Products.CreateProduct
                 Price = command.Price
             };
 
-            return new CreateProductResult(Guid.NewGuid());
+            documentSession.Store(product);
+            await documentSession.SaveChangesAsync(cancellationToken);
+
+            return new CreateProductResult(product.Id);
         }
     }
 }
