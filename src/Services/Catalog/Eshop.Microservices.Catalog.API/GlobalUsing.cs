@@ -5,3 +5,4 @@ global using Marten;
 global using Eshop.Microservices.BuildingBlocks.CQRS;
 global using Eshop.Microservices.Catalog.API.Models;
 global using Eshop.Microservices.Catalog.API.Exceptions;
+global using FluentValidation;
