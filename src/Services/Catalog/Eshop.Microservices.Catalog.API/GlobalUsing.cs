@@ -6,3 +6,5 @@ global using Eshop.Microservices.BuildingBlocks.CQRS;
 global using Eshop.Microservices.Catalog.API.Models;
 global using Eshop.Microservices.Catalog.API.Exceptions;
 global using FluentValidation;
+global using Eshop.Microservices.BuildingBlocks.Behaviors;
+global using Eshop.Microservices.BuildingBlocks.Exceptions.Handler;
