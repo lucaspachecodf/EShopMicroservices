@@ -8,3 +8,5 @@ global using Eshop.Microservices.Catalog.API.Exceptions;
 global using FluentValidation;
 global using Eshop.Microservices.BuildingBlocks.Behaviors;
 global using Eshop.Microservices.BuildingBlocks.Exceptions.Handler;
+global using Eshop.Microservices.Catalog.API.Data;
+global using Marten.Pagination;
