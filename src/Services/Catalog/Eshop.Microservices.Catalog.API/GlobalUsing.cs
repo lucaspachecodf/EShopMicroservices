@@ -10,3 +10,5 @@ global using Eshop.Microservices.BuildingBlocks.Behaviors;
 global using Eshop.Microservices.BuildingBlocks.Exceptions.Handler;
 global using Eshop.Microservices.Catalog.API.Data;
 global using Marten.Pagination;
+global using HealthChecks.UI.Client;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
