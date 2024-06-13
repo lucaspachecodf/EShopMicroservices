@@ -1,6 +1,4 @@
-﻿
-
-namespace Eshop.Microservices.Basket.API.Basket.StoreBasket
+﻿namespace Eshop.Microservices.Basket.API.Basket.StoreBasket
 {
     public record StoreBasketCommand(ShoppingCart Cart) : ICommand<StoreBasketResult>;
     public record StoreBasketResult(string UserName);
@@ -14,11 +12,12 @@ namespace Eshop.Microservices.Basket.API.Basket.StoreBasket
         }
     }
 
-    public class StoreBasketCommandHandler() : ICommandHandler<StoreBasketCommand, StoreBasketResult>
+    public class StoreBasketCommandHandler(IBasketRepository repository) : ICommandHandler<StoreBasketCommand, StoreBasketResult>
     {
         public async Task<StoreBasketResult> Handle(StoreBasketCommand command, CancellationToken cancellationToken)
         {
-            return new StoreBasketResult("Teste");
+            await repository.StoreBasket(command.Cart, cancellationToken);
+            return new StoreBasketResult(command.Cart.UserName);
         }
     }
 }

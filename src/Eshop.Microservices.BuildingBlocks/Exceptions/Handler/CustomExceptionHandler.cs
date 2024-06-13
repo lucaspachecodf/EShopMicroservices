@@ -10,8 +10,7 @@ namespace Eshop.Microservices.BuildingBlocks.Exceptions.Handler
     {
         public async ValueTask<bool> TryHandleAsync(HttpContext context, Exception exception, CancellationToken cancellationToken)
         {
-            logger.LogError(
-            "Error Message: {exceptionMessage}, Time of occurrence {time}",
+            logger.LogError("Error Message: {exceptionMessage}, Time of occurrence {time}",
             exception.Message, DateTime.UtcNow);
 
             (string Detail, string Title, int StatusCode) details = exception switch

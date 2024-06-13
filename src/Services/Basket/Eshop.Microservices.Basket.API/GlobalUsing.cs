@@ -5,3 +5,7 @@ global using Mapster;
 global using MediatR;
 global using FluentValidation;
 global using Eshop.Microservices.BuildingBlocks.Behaviors;
+global using Marten;
+global using Eshop.Microservices.Basket.API.Exceptions;
+global using Eshop.Microservices.Basket.API.Data;
+global using Eshop.Microservices.BuildingBlocks.Exceptions.Handler;

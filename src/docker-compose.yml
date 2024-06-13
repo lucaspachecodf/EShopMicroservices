@@ -11,6 +11,8 @@ services:
   catalogdb:
     image: postgres
 
+  basketdb:
+    image: postgres
 
   eshop.microservices.catalog.api:
     image: ${DOCKER_REGISTRY-}eshopmicroservicescatalogapi
@@ -20,3 +22,4 @@ services:
 
 volumes:
     postgres_catalog:
+    postgres_basket:
