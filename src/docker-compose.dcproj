@@ -7,7 +7,7 @@
     <ProjectGuid>4dde9438-2a4e-4a43-9785-34a770692597</ProjectGuid>
     <DockerLaunchAction>None</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>eshop.microservices.catalog.api</DockerServiceName>
+    <DockerServiceName>eshop.microservices.basket.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

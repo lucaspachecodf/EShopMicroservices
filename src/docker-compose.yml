@@ -23,6 +23,13 @@ services:
       context: .
       dockerfile: Services/Catalog/Eshop.Microservices.Catalog.API/Dockerfile
 
+  eshop.microservices.basket.api:
+    image: ${DOCKER_REGISTRY-}eshopmicroservicesbasketapi
+    build:
+      context: .
+      dockerfile: Services/Basket/Eshop.Microservices.Basket.API/Dockerfile
+
 volumes:
     postgres_catalog:
     postgres_basket:
+
