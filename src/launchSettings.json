@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "eshop.microservices.catalog.api": "StartDebugging",
-        "eshop.microservices.basket.api": "StartDebugging"
+        "eshop.microservices.basket.api": "StartDebugging",
+        "eshop.microservices.discount.grpc": "StartDebugging"
       }
     }
   }

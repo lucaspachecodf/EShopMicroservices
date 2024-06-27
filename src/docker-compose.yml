@@ -1,12 +1,5 @@
 version: '3.4'
 
-# services:
-#   eshop.microservices.catalog.api:
-#     image: ${DOCKER_REGISTRY-}eshopmicroservicescatalogapi
-#     build:
-#       context: .
-#       dockerfile: Services/Catalog/Eshop.Microservices.Catalog.API/Dockerfile
-
 services:
   catalogdb:
     image: postgres
@@ -29,7 +22,14 @@ services:
       context: .
       dockerfile: Services/Basket/Eshop.Microservices.Basket.API/Dockerfile
 
+  eshop.microservices.discount.grpc:
+    image: ${DOCKER_REGISTRY-}eshopmicroservicesdiscountgrpc
+    build:
+      context: .
+      dockerfile: Services/Discount/Eshop.Microservices.Discount.Grpc/Dockerfile
+
 volumes:
     postgres_catalog:
     postgres_basket:
+
 
