@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>7fd289ce-6cb1-498d-ab7f-05fb6e723106</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Eshop.Microservices.Ordering.Application\Eshop.Microservices.Ordering.Application.csproj" />
+    <ProjectReference Include="..\Eshop.Microservices.Ordering.Infrastructure\Eshop.Microservices.Ordering.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

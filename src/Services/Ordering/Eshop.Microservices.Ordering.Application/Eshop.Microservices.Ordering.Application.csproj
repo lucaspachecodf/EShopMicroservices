@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Eshop.Microservices.BuildingBlocks\Eshop.Microservices.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\Eshop.Microservices.Ordering.Domain\Eshop.Microservices.Ordering.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
