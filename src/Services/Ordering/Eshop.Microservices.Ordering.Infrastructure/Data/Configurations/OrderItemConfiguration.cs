@@ -1,9 +1,8 @@
 ﻿using Eshop.Microservices.Ordering.Domain.Models;
 using Eshop.Microservices.Ordering.Domain.ValueObjects;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Ordering.Infrastructure.Data.Configurations;
+namespace Eshop.Microservices.Ordering.Infrastructure.Data.Configurations;
 public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
 {
     public void Configure(EntityTypeBuilder<OrderItem> builder)

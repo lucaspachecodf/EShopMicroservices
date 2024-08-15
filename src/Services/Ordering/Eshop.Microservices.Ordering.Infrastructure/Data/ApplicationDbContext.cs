@@ -1,5 +1,4 @@
 ﻿using Eshop.Microservices.Ordering.Domain.Models;
-using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace Eshop.Microservices.Ordering.Infrastructure.Data
