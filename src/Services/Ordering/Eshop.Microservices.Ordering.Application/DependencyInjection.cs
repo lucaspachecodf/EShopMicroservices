@@ -1,9 +1,4 @@
-﻿using Eshop.Microservices.BuildingBlocks.Behaviors;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
-
-namespace Eshop.Microservices.Ordering.Application
+﻿namespace Eshop.Microservices.Ordering.Application
 {
     public static class DependencyInjection
     {

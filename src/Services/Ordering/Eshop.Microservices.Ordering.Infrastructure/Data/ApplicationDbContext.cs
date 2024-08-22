@@ -1,9 +1,8 @@
-﻿using Eshop.Microservices.Ordering.Domain.Models;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace Eshop.Microservices.Ordering.Infrastructure.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
        : base(options) { }

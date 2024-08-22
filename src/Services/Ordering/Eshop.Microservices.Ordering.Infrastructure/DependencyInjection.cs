@@ -1,6 +1,4 @@
-﻿using Eshop.Microservices.Ordering.Infrastructure.Data.Interceptors;
-
-namespace Eshop.Microservices.Ordering.Infrastructure
+﻿namespace Eshop.Microservices.Ordering.Infrastructure
 {
     public static class DependencyInjection
     {
@@ -17,6 +15,8 @@ namespace Eshop.Microservices.Ordering.Infrastructure
                 options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
                 options.UseSqlServer(connectionString);
             });
+
+            services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 
             return services;
         }

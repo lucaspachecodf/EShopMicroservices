@@ -1,0 +1,13 @@
+﻿global using Eshop.Microservices.Ordering.Application.Dtos;
+global using Eshop.Microservices.Ordering.Domain.Models;
+global using Eshop.Microservices.Ordering.Domain.ValueObjects;
+global using Eshop.Microservices.BuildingBlocks.CQRS;
+global using FluentValidation;
+global using Eshop.Microservices.BuildingBlocks.Behaviors;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Reflection;
+global using Eshop.Microservices.Ordering.Domain.Enums;
+global using Eshop.Microservices.Ordering.Application.Data;
+global using Eshop.Microservices.BuildingBlocks.Exceptions;
+global using Eshop.Microservices.Ordering.Application.Exceptions;
