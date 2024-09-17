@@ -1,7 +1,4 @@
-﻿using Carter;
-using Eshop.Microservices.Ordering.Application.Orders.Commands.DeleteOrder;
-using Mapster;
-using MediatR;
+﻿using Eshop.Microservices.Ordering.Application.Orders.Commands.DeleteOrder;
 
 namespace Eshop.Microservices.Ordering.API.Endpoints
 {

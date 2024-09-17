@@ -1,9 +1,5 @@
-﻿using Carter;
-using Eshop.Microservices.BuildingBlocks.Pagination;
-using Eshop.Microservices.Ordering.Application.Dtos;
+﻿using Eshop.Microservices.BuildingBlocks.Pagination;
 using Eshop.Microservices.Ordering.Application.Orders.Queries.GetOrders;
-using Mapster;
-using MediatR;
 
 namespace Eshop.Microservices.Ordering.API.Endpoints
 {

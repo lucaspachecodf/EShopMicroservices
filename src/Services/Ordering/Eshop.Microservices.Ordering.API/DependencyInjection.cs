@@ -1,5 +1,6 @@
-﻿using Carter;
-using Eshop.Microservices.BuildingBlocks.Exceptions.Handler;
+﻿using Eshop.Microservices.BuildingBlocks.Exceptions.Handler;
+using HealthChecks.UI.Client;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 namespace Eshop.Microservices.Ordering.API
 {
@@ -10,7 +11,8 @@ namespace Eshop.Microservices.Ordering.API
             services.AddCarter();
 
             services.AddExceptionHandler<CustomExceptionHandler>();
-            
+            services.AddHealthChecks().AddSqlServer(configuration.GetConnectionString("Database")!);
+
             return services;
         }
 
@@ -19,7 +21,12 @@ namespace Eshop.Microservices.Ordering.API
             app.MapCarter();
 
             app.UseExceptionHandler(options => { });
-            
+            app.UseHealthChecks("/health",
+                new HealthCheckOptions
+                {
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+
             return app;
         }
     }

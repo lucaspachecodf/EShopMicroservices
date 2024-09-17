@@ -10,8 +10,7 @@
             //return result
 
             var orderId = OrderId.Of(command.OrderId);
-            var order = await dbContext.Orders
-                .FindAsync([orderId], cancellationToken: cancellationToken);
+            var order = await dbContext.Orders.FindAsync([orderId], cancellationToken: cancellationToken);
 
             if (order is null)
             {

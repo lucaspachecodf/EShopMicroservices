@@ -1,8 +1,4 @@
-﻿using Carter;
-using Eshop.Microservices.Ordering.Application.Dtos;
-using Eshop.Microservices.Ordering.Application.Orders.Queries.GetOrdersByName;
-using Mapster;
-using MediatR;
+﻿using Eshop.Microservices.Ordering.Application.Orders.Queries.GetOrdersByName;
 
 namespace Eshop.Microservices.Ordering.API.Endpoints
 {

@@ -1,8 +1,4 @@
-﻿using Carter;
-using Eshop.Microservices.Ordering.Application.Dtos;
-using Eshop.Microservices.Ordering.Application.Orders.Commands.UpdateOrder;
-using Mapster;
-using MediatR;
+﻿using Eshop.Microservices.Ordering.Application.Orders.Commands.UpdateOrder;
 
 namespace Eshop.Microservices.Ordering.API.Endpoints
 {
