@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\Eshop.Microservices.BuildingBlocks\Eshop.Microservices.BuildingBlocks.csproj" />
     <ProjectReference Include="..\Eshop.Microservices.Ordering.Application\Eshop.Microservices.Ordering.Application.csproj" />
     <ProjectReference Include="..\Eshop.Microservices.Ordering.Infrastructure\Eshop.Microservices.Ordering.Infrastructure.csproj" />
   </ItemGroup>

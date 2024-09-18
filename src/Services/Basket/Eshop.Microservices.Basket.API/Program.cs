@@ -1,3 +1,8 @@
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+global using HealthChecks.UI.Client;
+global using Eshop.Microservices.Discount.Grpc;
+global using Eshop.Microservices.BuildingBlocks.Messaging.MassTransit;
+
 var builder = WebApplication.CreateBuilder(args);
 
 //Application Services
@@ -41,6 +46,9 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(
 
     return handler;
 });
+
+//Async Communication Services
+builder.Services.AddMessageBroker(builder.Configuration);
 
 //Cross-Cutting Services
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();

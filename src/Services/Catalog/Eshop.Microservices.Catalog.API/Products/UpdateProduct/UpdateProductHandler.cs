@@ -9,7 +9,8 @@ namespace Eshop.Microservices.Catalog.API.Products.UpdateProduct
     {
         public UpdateProductCommandValidator()
         {
-            RuleFor(command => command.Id).NotEmpty().WithMessage("Product ID is required");
+            RuleFor(command => command.Id)
+                .NotEmpty().WithMessage("Product ID is required");
 
             RuleFor(command => command.Name)
                 .NotEmpty().WithMessage("Name is required")

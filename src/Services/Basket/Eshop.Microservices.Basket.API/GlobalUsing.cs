@@ -9,6 +9,3 @@ global using Marten;
 global using Eshop.Microservices.Basket.API.Exceptions;
 global using Eshop.Microservices.Basket.API.Data;
 global using Eshop.Microservices.BuildingBlocks.Exceptions.Handler;
-global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-global using HealthChecks.UI.Client;
-global using Eshop.Microservices.Discount.Grpc;

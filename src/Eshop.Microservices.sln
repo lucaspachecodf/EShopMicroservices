@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eshop.Microservices.Catalog
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{ECC1CB1D-5017-471C-8CAD-B68CD7BA21BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eshop.Microservices.BuildingBlocks", "Eshop.Microservices.BuildingBlocks\Eshop.Microservices.BuildingBlocks.csproj", "{35D086B1-368A-4E43-9DE3-FBD0EE5DC4F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eshop.Microservices.BuildingBlocks", "BuildingBlocks\Eshop.Microservices.BuildingBlocks\Eshop.Microservices.BuildingBlocks.csproj", "{35D086B1-368A-4E43-9DE3-FBD0EE5DC4F2}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4DDE9438-2A4E-4A43-9785-34A770692597}"
 EndProject
@@ -27,11 +27,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{91
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eshop.Microservices.Ordering.API", "Services\Ordering\Eshop.Microservices.Ordering.API\Eshop.Microservices.Ordering.API.csproj", "{6EAE476D-2B6F-4D74-A163-0E17B4AFD6E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Microservices.Ordering.Domain", "Services\Ordering\Eshop.Microservices.Ordering.Domain\Eshop.Microservices.Ordering.Domain.csproj", "{E22133F9-0749-4C07-B6BB-F88D22EEB2A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eshop.Microservices.Ordering.Domain", "Services\Ordering\Eshop.Microservices.Ordering.Domain\Eshop.Microservices.Ordering.Domain.csproj", "{E22133F9-0749-4C07-B6BB-F88D22EEB2A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Microservices.Ordering.Application", "Services\Ordering\Eshop.Microservices.Ordering.Application\Eshop.Microservices.Ordering.Application.csproj", "{61D99ACD-59B3-409B-A208-BDEAD632F098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eshop.Microservices.Ordering.Application", "Services\Ordering\Eshop.Microservices.Ordering.Application\Eshop.Microservices.Ordering.Application.csproj", "{61D99ACD-59B3-409B-A208-BDEAD632F098}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Microservices.Ordering.Infrastructure", "Services\Ordering\Eshop.Microservices.Ordering.Infrastructure\Eshop.Microservices.Ordering.Infrastructure.csproj", "{0E0B1D16-6E8C-4D40-BD88-B86DB05DECE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eshop.Microservices.Ordering.Infrastructure", "Services\Ordering\Eshop.Microservices.Ordering.Infrastructure\Eshop.Microservices.Ordering.Infrastructure.csproj", "{0E0B1D16-6E8C-4D40-BD88-B86DB05DECE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop.Microservices.BuildingBlocks.Messaging", "BuildingBlocks\Eshop.Microservices.BuildingBlocks.Messaging\Eshop.Microservices.BuildingBlocks.Messaging.csproj", "{3554A52C-4B5B-474F-ADFD-40B94973742C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{0E0B1D16-6E8C-4D40-BD88-B86DB05DECE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E0B1D16-6E8C-4D40-BD88-B86DB05DECE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E0B1D16-6E8C-4D40-BD88-B86DB05DECE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3554A52C-4B5B-474F-ADFD-40B94973742C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3554A52C-4B5B-474F-ADFD-40B94973742C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3554A52C-4B5B-474F-ADFD-40B94973742C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3554A52C-4B5B-474F-ADFD-40B94973742C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{E22133F9-0749-4C07-B6BB-F88D22EEB2A2} = {91397145-54ED-4E35-ACF7-CFBE992920BF}
 		{61D99ACD-59B3-409B-A208-BDEAD632F098} = {91397145-54ED-4E35-ACF7-CFBE992920BF}
 		{0E0B1D16-6E8C-4D40-BD88-B86DB05DECE7} = {91397145-54ED-4E35-ACF7-CFBE992920BF}
+		{3554A52C-4B5B-474F-ADFD-40B94973742C} = {ECC1CB1D-5017-471C-8CAD-B68CD7BA21BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {75557BF9-B8A2-45EA-9885-3558EB2F3384}

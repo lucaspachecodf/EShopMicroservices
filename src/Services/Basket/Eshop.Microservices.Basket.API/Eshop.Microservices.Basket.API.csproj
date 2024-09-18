@@ -23,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Eshop.Microservices.BuildingBlocks\Eshop.Microservices.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Eshop.Microservices.BuildingBlocks.Messaging\Eshop.Microservices.BuildingBlocks.Messaging.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Eshop.Microservices.BuildingBlocks\Eshop.Microservices.BuildingBlocks.csproj" />    
   </ItemGroup>
 
   <ItemGroup>
