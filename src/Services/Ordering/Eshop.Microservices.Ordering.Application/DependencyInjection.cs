@@ -1,4 +1,7 @@
-﻿namespace Eshop.Microservices.Ordering.Application
+﻿using Eshop.Microservices.BuildingBlocks.Messaging.MassTransit;
+using Microsoft.FeatureManagement;
+
+namespace Eshop.Microservices.Ordering.Application
 {
     public static class DependencyInjection
     {
@@ -11,6 +14,9 @@
                 config.AddOpenBehavior(typeof(ValidationBehavior<,>));
                 config.AddOpenBehavior(typeof(LoggingBehavior<,>));
             });
+
+            services.AddFeatureManagement();
+            services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
 
             return services;
         }
