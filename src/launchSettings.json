@@ -6,7 +6,8 @@
       "serviceActions": {
         "eshop.microservices.catalog.api": "StartDebugging",
         "eshop.microservices.basket.api": "StartDebugging",
-        "eshop.microservices.discount.grpc": "StartDebugging"
+        "eshop.microservices.discount.grpc": "StartDebugging",
+        "eshop.microservices.ordering.api": "StartDebugging"
       }
     }
   }

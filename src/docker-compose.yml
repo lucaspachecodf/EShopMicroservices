@@ -34,8 +34,15 @@ services:
       context: .
       dockerfile: Services/Discount/Eshop.Microservices.Discount.Grpc/Dockerfile
 
+  eshop.microservices.ordering.api:
+    image: ${DOCKER_REGISTRY-}eshopmicroservicesorderingapi
+    build:
+      context: .
+      dockerfile: Services/Ordering/Eshop.Microservices.Ordering.API/Dockerfile
+
 volumes:
     postgres_catalog:
     postgres_basket:
+
 
 

@@ -6,9 +6,13 @@ namespace Eshop.Microservices.Ordering.Application.Orders.EventHandlers.Integrat
 {
     public class BasketCheckoutEventHandler(ISender sender, ILogger<BasketCheckoutEventHandler> logger) : IConsumer<BasketCheckoutEvent>
     {
-        public Task Consume(ConsumeContext<BasketCheckoutEvent> context)
+        public async Task Consume(ConsumeContext<BasketCheckoutEvent> context)
         {
-            throw new NotImplementedException();
+            // TODO: Create new order and start order fullfillment process
+            logger.LogInformation("Integration Event handled: {IntegrationEvent}", context.Message.GetType().Name);
+
+            var command = MapToCreateOrderCommand(context.Message);
+            await sender.Send(command);
         }
 
         private CreateOrderCommand MapToCreateOrderCommand(BasketCheckoutEvent message)
