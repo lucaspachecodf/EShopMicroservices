@@ -1,7 +1,4 @@
 ﻿using Eshop.Microservices.Ordering.Domain.Enums;
-using Eshop.Microservices.Ordering.Domain.Models;
-using Eshop.Microservices.Ordering.Domain.ValueObjects;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Eshop.Microservices.Ordering.Infrastructure.Data.Configurations;
@@ -58,7 +55,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
                    .HasMaxLength(50);
 
                addressBuilder.Property(a => a.ZipCode)
-                   .HasMaxLength(5)
+                   .HasMaxLength(9)
                    .IsRequired();
            });
 
@@ -87,7 +84,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
                   .HasMaxLength(50);
 
               addressBuilder.Property(a => a.ZipCode)
-                  .HasMaxLength(5)
+                  .HasMaxLength(9)
                   .IsRequired();
           });
 
